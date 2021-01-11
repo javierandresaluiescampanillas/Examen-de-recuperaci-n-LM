@@ -1,0 +1,167 @@
+/*El documento entero*/
+body {
+    margin: 0;
+    background-color: black;
+    background-repeat: repeat;
+}
+/*La barra de navegación en general*/
+.topnav {
+    overflow: hidden;
+    background-color: rgb(41, 41, 41);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0px;
+    position: fixed;
+    min-width: 90%;
+}
+/*Los textosde la barra de navegación excepto el "Home"*/
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: RunyTunesRevisitedNF;
+}
+/*Habilitar 2 fuentes*/
+@font-face{
+    src:url('../fuentes/BLKCHCRY.TTF');
+    font-family: BLKCHCRY;
+}
+
+@font-face{
+    src:url('../fuentes/RunyTunesRevisitedNF.ttf');
+    font-family: RunyTunesRevisitedNF;
+}
+/*Imagen de la portada*/
+.hero{
+    background-image: url('../imagenes/norse-mithology-bg.jpg');
+    background-position: 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/**Título de la portada*/
+.hero h1{
+    margin-left:2%;
+    font-family: RunyTunesRevisitedNF;
+    font-size: 50px;
+}
+/*La caja de espacio para el título de la historia*/
+.introduction{
+    margin-top: 6%;
+}
+/*Título de la introducción*/
+.introduction h1{
+    text-align: center;
+    font-family: RunyTunesRevisitedNF;
+    color: white;
+    font-size: 50px;
+}
+/*La caja de espacio donde va la historia*/
+.history{
+    color: white;
+    margin-left: 13%;
+    margin-right: 13%;
+    font-size: 28px;
+    font-family: BLKCHCRY;
+}
+/*Para que la inicial de cada párrafo sea diferente*/
+.history p::first-letter{
+    font-size: 35px;
+    color: orange;
+}
+/*Formato de la línea horizontal*/
+hr.hrr{
+    margin-left: 9%;
+    border: 1px solid orange;
+    margin-right: 9%;
+}
+/*Espacio para la galería*/
+.galery{
+    margin-left: 13%;
+    margin-right: 13%;
+}
+/*Formato para las imágenes de la galería*/
+.images{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+/*Formato2.0 para las imágenes de la galería*/
+.images img{
+    max-width: 20%;
+    min-width: 216px;
+    max-height: 20%;
+    min-height: 288px;
+}
+/*Formato para el título de la galería*/
+.gallery h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: RunyTunesRevisitedNF;
+}
+/*Espacio para el footer*/
+.footer{
+    text-align: center;
+    background-color: rgb(121, 98, 68);
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: BLKCHCRY;
+}
+/*Formato para la imagen del footer*/
+.footer img{
+    max-width: 7%;
+    max-height: 7%;
+    min-width: 76.35px;
+    min-height: 71.85px;
+}
+/*Ocurrencias cuando el ratón está sobre los elementos de la barra de navegación excepto "Home"*/
+.topnav a:hover {
+    background-color: rgb(121, 98, 68);
+    color: black;
+}
+/*Formato del elemento "Home" de la barra de navegación*/
+.topnav a.active {
+    background-color:  rgb(41, 41, 41);
+    color: white;
+}
+/*Ocurrencias cuando el ratón está sobre "Home" de la barra de navegación*/
+.topnav a.active:hover {
+    background-color:rgb(121, 98, 68);
+    color: black;
+}
+/*Icono de la barra de navegación (Menú)*/
+.topnav .icon {
+    display: none;
+}
+/*Cambiar a menú desplegable la barra de navegación cuando es más pequeña la pantalla*/
+@media screen and (max-width: 660px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .topnav.responsive {position: fixed;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+/*Opción secundaria a el scroll smooth de javascript*/
+html{
+    scroll-behavior: smooth;
+}
